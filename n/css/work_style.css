@@ -24,16 +24,15 @@ body {
   
   content {
     font-family: "Domine", serif;
-    color: black;
     margin-left: 15px;
     text-align: left;
   }
   
   button {
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     border-width: 3px;
-    border-color: black;
+    border-color: white;
     border-radius: 5px;
     padding: 10px;
     text-align: center;
@@ -54,10 +53,10 @@ body {
   }
   
   .table-section, .management-section, .search-section {
-    background-color: white;
+    background-color: black;
     margin: 20px;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .table-options, .management-options, .search-options {
@@ -82,16 +81,16 @@ footer {
 }
 
 .section-h {
-  color: white; 
-  background-color: black;
+  color: black; 
+  background-color: white;
   width: 100%;
   padding: 5px;
 }
 
 #submit-search {
   margin-top: 10px;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   width: 20%;
   padding: 3px;
 }
