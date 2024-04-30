@@ -1,0 +1,151 @@
+body {
+    background-color: black;
+  }
+  
+  nav {
+    background-color: gold;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    position: fixed;
+  }
+  
+  .menu {
+    margin-top: 27px;
+    padding: 0px;
+  }
+  
+  li {
+    list-style: none;
+    display: inline-block;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: black;
+    border-color: black;
+    border-radius: 40px;
+    border-width: 2px;
+    border-style: solid;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  #menu_a {
+    padding-left: 5px;
+    margin-bottom: 20px;
+  }
+  
+  #menu_b {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 20px;
+  }
+
+  .menu a:hover {
+    background-color: black;
+    color: gold;
+  }
+  
+  #menuRight {
+    justify-content: right;
+  }
+  
+  content {
+    color: white;
+    margin-left: 5px;
+  }
+  
+  #index_content_1 {
+    text-align: center;
+    margin-top: 260px;
+  }
+  
+  #index_content_2 {
+    font-size: 50px;
+    text-align: left;
+    margin-left: 20%;
+    margin-top: 250px;
+  }
+  
+  #index_2h1 {
+    text-align: left;
+    margin-left: 20%;
+  }
+  
+  footer {
+    margin-top: 50px;
+    background-color: gold;
+    padding: 5px;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  #index_1h1 {
+    width: 95%;
+    border-style: solid;
+    border-width: 2px;
+    display: block;
+    border-color: white;
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: 3.3%;
+    text-align: center;
+  }
+  
+  #index_2p {
+    font-weight: lighter;
+    margin-top: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  #index_1h1_b1 {
+    text-decoration: none;
+    border-color: gold;
+    border-width: 2px;
+    border-style: solid;
+    padding-top: 6px;
+    margin-left: 20%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  #span-1 {
+    animation: fadeIn 2s linear infinite;
+    animation-delay: 2s;
+  }
+  
+  #span-2 {
+    animation: fadeOut 2s linear infinite;
+    animation-delay: 2s;
+  }
+  
+  #span-3 {
+    animation: fadeOut 2s linear infinite;
+    animation-delay: 2s;
+  }
