@@ -20,8 +20,6 @@ body {
   }
   
     .main {
-      margin-top: 15%;
-      margin-bottom: 8%;
       margin-left: 7%;
       margin-right: 7%;
     }
@@ -32,6 +30,7 @@ body {
     }
     
     .login-section {
+      margin-bottom: 20%;
       background-color: black;
       padding: 20px;
       margin-top: 5%;
