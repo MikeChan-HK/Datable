@@ -25,12 +25,13 @@ body {
     }
 
     .greeting {
+      margin-top: 5%;
       font-family: "Domine", serif;
       text-align: left;
     }
     
     .login-section {
-      margin-bottom: 20%;
+      margin-bottom: 5%;
       background-color: black;
       padding: 20px;
       margin-top: 5%;
