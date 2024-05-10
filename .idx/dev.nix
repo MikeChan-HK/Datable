@@ -10,6 +10,8 @@
     pkgs.python3
     pkgs.pkg
     pkgs.php81Packages.composer
+    pkgs.python311Packages.pip
+    pkgs.sudo
   ];
   # Sets environment variables in the workspace
   env = {};

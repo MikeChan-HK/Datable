@@ -1,4 +1,5 @@
 {
     "IDX.corgiMode": true,
     "IDX.enableIntegrationsPanel": true,
+    "git.ignoreLimitWarning": true,
 }
