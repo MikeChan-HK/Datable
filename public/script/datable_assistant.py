@@ -160,5 +160,4 @@ def handle_query():
         except Exception as e:
             return jsonify({'response': f'An error occurred: {e}'})
 
-if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+app.run(debug=True, port=5000)
