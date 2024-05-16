@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<html>
-  <!doctype html>
-  <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Datable</title>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="css/assistant_style.css" rel="stylesheet">
-  </head>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Datable</title>
+  <link href="css/assistant_style.css" rel="stylesheet">
+</head>
   <body>
     <nav>
       <ul class="menu">
@@ -23,64 +20,92 @@
     <content>
       <section class="greeting">
         <h1 style="font-size: 250%;"><b> How Can I Assist You?</b></h1>
-      </section>  
-    <div id="chatbox"></div>
-    <div id="input">
-        <input type="text" placeholder="Type your message here...">
-        <button>Send</button>
-    </div>
+      </section>
+      <div id="chatbox"></div>
+      <div id="selector" class="selector hidden">
+        <div class="selector-message">是否确定执行？</div>
+        <button class="selector-button" id="yes-button">Yes</button>
+        <button class="selector-button" id="no-button">No</button>
+      </div>
+
+      <div id="input">
+          <input type="text" placeholder="Type your message here...">
+          <button>Send</button>
+      </div>
     </content>
 </body>
 <script>
-    async function handleInput() {
-        const message = input.value.trim();
-        if (message !== "") {
-            displayUserMessage(message);
-            input.value = "";
+  async function handleInput() {
+  const message = input.value.trim();
+  if (message !== "") {
+    displayUserMessage(message);
+    input.value = "";
 
-            try {
-                const response = await fetch('/api/query', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ question: message })
-                });
+    try {
+      const response = await fetch('/api/query', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ 'question': message })
+      });
 
-                const result = await response.json();
-                displayBotMessage(result.response);
-                chatbox.scrollTop = chatbox.scrollHeight;
-            } catch (error) {
-                console.error('Error:', error);
-                displayBotMessage('Sorry, there was an error processing your request.');
-            }
+      const result = await response.json();
+      displayBotMessage(result.response);
+      chatbox.scrollTop = chatbox.scrollHeight;
+    } catch (error) {
+        displayBotMessage('Sorry, there was an error processing your request.');
+        displayBotMessage('More pacifically... Network response was not ok.');
+        displayBotMessage("This error is due to various reasons such as the server endpoint not being found (404), server error (500), bad request (400), unauthorized access (401)");
+        displayBotMessage("Do you want to know more about this error?");
+        if (message === "Yes") {
+          displayBotMessage(console.error);
         }
     }
+  }
+}
 
-    function displayUserMessage(message) {
-        const div = document.createElement("div");
-        div.classList.add("message", "user-message");
-        div.textContent = message;
-        chatbox.appendChild(div);
+  function displayUserMessage(message) {
+    const div = document.createElement("div");
+    div.classList.add("message", "user-message");
+    div.textContent = message;
+    chatbox.appendChild(div);
+  }
+
+  function displayBotMessage(response) {
+    const div = document.createElement("div");
+    div.classList.add("message", "bot-message");
+    div.textContent = response;
+    chatbox.appendChild(div);
+  }
+
+  const chatbox = document.getElementById("chatbox");
+  const input = document.querySelector("#input input[type='text']");
+  const button = document.querySelector("#input button");
+
+  button.addEventListener("click", handleInput);
+  input.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      handleInput();
     }
+  });
 
-    function displayBotMessage(response) {
-        const div = document.createElement("div");
-        div.classList.add("message", "bot-message");
-        div.textContent = response;
-        chatbox.appendChild(div);
-    }
+  function toggleSelector(message) {
+    const selector = document.getElementById('selector');
+    const selectorMessage = document.querySelector('.selector-message');
+    selectorMessage.textContent = message;
+    selector.classList.toggle('hidden');
+  }
 
-    const chatbox = document.getElementById("chatbox");
-    const input = document.querySelector("#input input[type='text']");
-    const button = document.querySelector("#input button");
+  document.getElementById('yes-button').addEventListener('click', function() {
+    toggleSelector('已经执行');
+    const  = document.getElementById('selector');
+  });
 
-    button.addEventListener("click", handleInput);
-    input.addEventListener("keydown", (event) => {
-        if (event.key === "Enter") {
-            event.preventDefault();
-            handleInput();
-        }
-    });
+  document.getElementById('no-button').addEventListener('click', function() {
+    toggleSelector('已经取消');
+    // then
+  });
 </script>
 </html>

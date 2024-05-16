@@ -148,7 +148,6 @@ def handle_query():
     if use_SQL == 'N':
         return jsonify({'response': Answer})
     elif use_SQL == 'Y':
-        # Run the SQL query and return the result
         try:
             con = mysql.connector.connect(host="localhost", user="admin", password="admin")
             cursor = con.cursor()
@@ -156,7 +155,7 @@ def handle_query():
             table = cursor.fetchall()
             explain_prompt_formatted_str: str = explain_prompt.format(sql_result=table)
             explain_prediction = llm.predict(explain_prompt_formatted_str)
-            return jsonify({'response': explain_prediction})
+            return jsonify({'response': f"Successful Execution: {explain_prediction}"})
         except Exception as e:
             return jsonify({'response': f'An error occurred: {e}'})
 
