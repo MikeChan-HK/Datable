@@ -1,35 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Datable</title>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <link href="css/login_style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/login_style.css">
 </head>
 <body>
-  <content>
-    <section class="main">
-        <section class="greeting">
-            <img src="Assets/logo.png" alt="logo" style="width: 125px;height: 50px;margin-bottom: 10%;">
-            <section class="greeting-text">
-                <h1><b>Start Your New Journey With AI.</b></h1>
-                <h5>Thank You For Using Datable.</h5>
-            </section>
-        </section>
-        <!-- Start of PHP Form -->
+  <div class="container">
+    <header class="header">
+      <div class="header-title"><img src="Assets/logo.png" alt="logo" style="width: 105px;height: 40px"></div>
+      <a class="header-button" href="/public/index.html">About Datable</a>
+    </header>
+    <main class="main-content">
+      <h1 class="main-heading">Start Your New Journey With <span class="highlight">Datable</span></h1>
+      <div class="content-box">
+        <p class="content-text">Start using Datable for student union</p>
         <form action="process_login.php" method="post">
-            <section class="login-section">
-                <input type="text" name="userID" placeholder="User ID">
-                <input type="password" name="password" placeholder="Password">
-                <button type="submit" id="submit-search">Continue</button>
-            </section>
+          <input class="login-input" type="text" name="userID" placeholder="User ID">
+          <input class="login-input" type="password" name="password" placeholder="Password">
+          <button class="login-button type="submit" id="submit-search">Continue</button>
         </form>
-        <!-- End of PHP Form -->
-    </section>
-  </content>
-  <script src="script/main.js"></script>
+        <p class="terms-text">By continuing, You understand that the AI feature is experimental and may cause errors.</p>
+      </div>
+      <div class="announcement">
+        <span class="announcement-new">NEW</span> Introducing Datable for web is available to preview.
+      </div>
+      <p class="description-text">Datable is a next generation AI database built for Data base. Datable is an experimental initiative aimed at bringing your entire workflow to work with ai.</p>
+      <p class="author-text">MADE BY CHAN LONG HIN</p>
+    </main>
+  </div>
+
+  <script>
+    document.querySelectorAll('.toggle-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.closest('div').querySelector('.faq-content');
+        content.classList.toggle('hidden');
+        button.textContent = content.classList.contains('hidden') ? '+' : '×';
+      });
+    });
+  </script>
 </body>
 </html>

@@ -23,7 +23,7 @@
       </section>
       <div id="chatbox"></div>
       <div id="selector" class="selector hidden">
-        <div class="selector-message">是否确定执行？</div>
+        <div class="selector-message">Run The Following Command?</div>
         <button class="selector-button" id="yes-button">Yes</button>
         <button class="selector-button" id="no-button">No</button>
       </div>
@@ -55,13 +55,8 @@
       chatbox.scrollTop = chatbox.scrollHeight;
     } catch (error) {
         displayBotMessage('Sorry, there was an error processing your request.');
-        displayBotMessage('More pacifically... Network response was not ok.');
-        displayBotMessage("This error is due to various reasons such as the server endpoint not being found (404), server error (500), bad request (400), unauthorized access (401)");
-        displayBotMessage("Do you want to know more about this error?");
-        if (message === "Yes") {
-          displayBotMessage(console.error);
-        }
-    }
+        toggleSelector("Do you want to know more about this error?");
+      }
   }
 }
 
@@ -92,20 +87,31 @@
   });
 
   function toggleSelector(message) {
-    const selector = document.getElementById('selector');
-    const selectorMessage = document.querySelector('.selector-message');
+  const selector = document.getElementById('selector');
+  const selectorMessage = document.querySelector('.selector-message');
+  if (message) {
     selectorMessage.textContent = message;
+  }
+  selector.classList.toggle('hidden');
+}
+
+  function toggleSelector() {
+    const selector = document.getElementById('selector');
     selector.classList.toggle('hidden');
   }
 
+  let select;
+
   document.getElementById('yes-button').addEventListener('click', function() {
-    toggleSelector('已经执行');
-    const  = document.getElementById('selector');
+    toggleSelector();
+    select = true;
   });
 
   document.getElementById('no-button').addEventListener('click', function() {
-    toggleSelector('已经取消');
-    // then
+    toggleSelector();
+    select = false;
   });
+
+
 </script>
 </html>

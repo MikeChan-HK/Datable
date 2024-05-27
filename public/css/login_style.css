@@ -1,60 +1,132 @@
 body {
-    background-color: #fffe7a;
-    }
-    
-    button {
-      background-color: black;
-      color: white;
-      border-width: 3px;
-      border-color: white;
-      border-radius: 10px;
-      padding: 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin-left: 3px;
-      cursor: pointer;
-      margin-top: 10px;
-      margin-bottom: 5px;
-  }
-  
-    .main {
-      margin-left: 7%;
-      margin-right: 7%;
-    }
+  background-color: gold;
+  color: #1f2937;
+  min-height: 100vh;
+  padding: 1.5rem;
+}
 
-    .greeting {
-      margin-top: 5%;
-      font-family: "Domine", serif;
-      text-align: left;
-    }
-    
-    .login-section {
-      margin-bottom: 5%;
-      background-color: black;
-      padding: 20px;
-      margin-top: 5%;
-      border-radius: 20px;
-      height: 30%;
-      color: white;
-  }
-  
-  .greeting-text {
-    margin-top: 12%;
-  }
+.container {
+  background-color: gold;
+  color: #1f2937;
+  min-height: 100vh;
+  padding: 1.5rem;
+}
+a {
+  text-decoration: none;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
 
-  input {
-    padding: 10px;
-    margin: 5px;
-    border-radius: 5px;
-    width: 100%;
-  }
-  
-  #submit-search {
-    margin-top: 10px;
-    background-color: white;
-    color: black;
-    width: 100px;
-    padding: 3px;
-  }
+.header-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+}
+
+.header-button {
+  border: 2px solid black;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: gold;
+  color: black;
+}
+
+.main-content {
+  max-width: 32rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main-heading {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #18181b;
+}
+
+.content-box {
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.content-text {
+  margin-bottom: 1rem;
+  color: #4b5563;
+}
+
+.login-input {
+  width: 95%;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+}
+
+.login-button {
+  width: 100%;
+  background-color: black;
+  color: #ffffff;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-or {
+  margin-bottom: 1rem;
+  color: #4b5563;
+}
+
+.terms-text {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.terms-link {
+  text-decoration: underline;
+}
+
+.announcement {
+  background-color: white;
+  color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.announcement-new {
+  background-color: gold;
+  color: black;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  margin-right: 0.5rem;
+}
+
+.announcement-link {
+  text-decoration: underline;
+}
+
+.description-text {
+  margin-bottom: 1.5rem;
+  color: #4b5563;
+}
+
+.author-text {
+  margin-bottom: 1.5rem;
+  color: #4b5563;
+}
