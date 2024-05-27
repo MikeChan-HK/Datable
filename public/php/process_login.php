@@ -1,47 +1,41 @@
 <?php
-session_start();
+header('Content-Type: application/json');
 
-$host = 'sql6.freesqldatabase.com';
-$db_name = 'sql6703448';
-$db_user = 'sql6703448';
-$db_password = 't181ZZyQ5m';
-$port = 3306;
+// Database configuration
+$servername = "localhost";
+$username = "your_db_username";
+$password = "your_db_password";
+$dbname = "your_db_name";
 
-$mysqli = new mysqli($host, $db_user, $db_password, $db_name, $port);
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-if ($mysqli->connect_error) {
-    die("Connection failed: " . $mysqli->connect_error);
+// Check connection
+if ($conn->connect_error) {
+    echo json_encode(['status' => 'error', 'message' => 'Connection failed: ' . $conn->connect_error]);
+    exit();
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $userID = $_POST['userID'];
-    $password = $_POST['password'];
-    $sql = "SELECT ID, Password FROM user WHERE ID = ?";
-    if ($stmt = $mysqli->prepare($sql)) {
-        $stmt->bind_param("s", $param_id);
-        $param_id = $userID;
-        if ($stmt->execute()) {
-            $stmt->store_result();
-            if ($stmt->num_rows == 1) {
-                $stmt->bind_result($id, $hashed_password);
-                if ($stmt->fetch()) {
-                    if (password_verify($password, $hashed_password)) {
-                        $_SESSION["loggedin"] = true;
-                        $_SESSION["id"] = $id;
-                        header("location: work.html");
-                    } else {
-                        echo "The password you entered was not valid.";
-                    }
-                }
-            } else {
-                echo "No account found with that userID.";
-            }
-        } else {
-            echo "Oops! Something went wrong. Please try again later.";
-        }
-        $stmt->close();
-    }
+// Get user input from form
+$userID = $_POST['userID'];
+$password = $_POST['password'];
+
+// Prepare and bind
+$stmt = $conn->prepare("SELECT * FROM users WHERE userID = ? AND password = ?");
+$stmt->bind_param("ss", $userID, $password);
+
+// Execute statement
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($result->num_rows > 0) {
+    // Login successful
+    echo json_encode(['status' => 'success']);
+} else {
+    // Login failed
+    echo json_encode(['status' => 'fail']);
 }
 
-$mysqli->close();
+$stmt->close();
+$conn->close();
 ?>
