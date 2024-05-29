@@ -7,5 +7,7 @@ As school assets continue to increase, how to effectively manage and monitor the
 # Introducing Datable
 These days, managing database means navigating an endless sea of complexity. I felt this pain at my experience, so I designed Datable, an experimental initiative aimed at bringing your entire workflow to work with ai. Datable starts with a web-based workspace that'll feel familiar for database but fresh.
 
-## License
+# License
 This project is licensed under the MIT License.
+
+![Build Status](https://travis-ci.org/yourusername/yourproject.svg?branch=main%29)
