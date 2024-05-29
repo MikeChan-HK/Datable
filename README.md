@@ -10,7 +10,7 @@
 
 <br>
 
-![poster](https://github.com/github_poster/logo_introduction.png)
+![poster](https://github.com/MikeChan-HK/Datable/blob/main/github_poster/logo_introduction.png)
 
 <br>
 <p align="center">
@@ -44,8 +44,16 @@ This provides a natural-language interface to your database's general-purpose ca
 <br>
 
 # Showcase
-![poster](https://github.com/github_poster/login_page.jpeg)
+![poster](https://github.com/MikeChan-HK/Datable/blob/main/github_poster/login_page.jpeg)
 > We provide a seamless and smooth login experience. It has been protected for SQL injection and so on.
+<br>
+
+![poster](https://github.com/MikeChan-HK/Datable/blob/main/github_poster/work_page.jpeg)
+> The classic work page adopts the same style as a whole. The yellow background is decorated with black embellishment, and the two-tone website design with a simple interface is adopted. Reasonable typesetting and clear classification of functional blocks for the convenience of users. It provides a beautiful and consistent user experience.
+<br>
+
+![poster](https://github.com/MikeChan-HK/Datable/blob/main/github_poster/assistant_page.jpeg)
+> AI technology is used to perform SQL operations for users with artificial intelligence assistants. Users can query tables, add data, change data tables and other detailed operations. For example, the user asks the artificial intelligence assistant, ”Find the loan status of the object 001. If it has not been lent, please register as user 001 has been borrowed, but if the object has been borrowed, please register the object status as not been loaned, and then find the object that the user 001 has borrowed“. The artificial intelligence assistant will ask you. Whether you want to perform the operation, and then it will run.
 <br>
 
 # Demo
