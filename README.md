@@ -1,10 +1,10 @@
 <h1 align="center">Datable</h1>
 
 <p align="center">
-    <a href="https://discord.gg/Hvz9Axh84z">
+        <a href="https://github.com/MikeChan-HK/Datable"><img src="https://img.shields.io/static/v1?label=license&message=AGPL&color=gold&style=flat" alt="License"/></a>
     <a href="https://github.com/OpenInterpreter/open-interpreter/blob/main/docs/README_ZH.md"><img src="https://img.shields.io/badge/文档-中文版-white.svg" alt="ZH doc"/></a>
     <a href="https://github.com/OpenInterpreter/open-interpreter/blob/main/docs/README_EN.md"><img src="https://img.shields.io/badge/Doc-English-white.svg" alt="EN doc"/></a>
-    <a href="https://github.com/MikeChan-HK/datable/blob/main/LICENSE"><img src="https://img.shields.io/static/v1?label=license&message=AGPL&color=white&style=flat" alt="License"/></a>
+    <a href="https://github.com/MikeChan-HK/Datable/blob/main/LICENSE"><img src="https://img.shields.io/static/v1?label=license&message=AGPL&color=white&style=flat" alt="License"/></a>
     <br>
     <br>
     <br><a href="s191211@cpss.edu.hk">Get early access to the Datable web app</a>‎ ‎ |‎ ‎ <a href="https://docs.google.com/document/d/1YkVW-xTbZ6kdDMHiEEH0Ls8R_bz_hpFfJt4RAvD3fFY/edit">Research Documentation</a><br>
