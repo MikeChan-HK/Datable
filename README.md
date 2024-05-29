@@ -44,8 +44,10 @@ This provides a natural-language interface to your database's general-purpose ca
 <br>
 
 # Showcase
+![poster](https://github.com/MikeChan-HK/Datable/blob/main/public/Assets/logo_introduction.png)
+<br>
 
-## Demo
+# Demo
 
 https://www.datable.ai
 
