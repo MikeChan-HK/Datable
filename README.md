@@ -1,7 +1,7 @@
 <h1 align="center">Datable</h1>
 
 <p align="center">
-        <a href="https://github.com/MikeChan-HK/Datable"><img src="https://img.shields.io/static/v1?label=license&message=AGPL&color=gold&style=flat" alt="License"/></a>
+    <a href="https://github.com/MikeChan-HK/Datable"><img src="https://img.shields.io/static/v1?label=Share My Repo&message=AGPL&color=gold&style=flat" alt="Datable"/></a>
     <a href="https://github.com/OpenInterpreter/open-interpreter/blob/main/docs/README_ZH.md"><img src="https://img.shields.io/badge/文档-中文版-white.svg" alt="ZH doc"/></a>
     <a href="https://github.com/OpenInterpreter/open-interpreter/blob/main/docs/README_EN.md"><img src="https://img.shields.io/badge/Doc-English-white.svg" alt="EN doc"/></a>
     <a href="https://github.com/MikeChan-HK/Datable/blob/main/LICENSE"><img src="https://img.shields.io/static/v1?label=license&message=AGPL&color=white&style=flat" alt="License"/></a>
