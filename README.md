@@ -14,7 +14,7 @@
 
 <br>
 <p align="center">
-<strong>The New Computer Update</strong> introduced <strong><code>--os</code></strong> and a new <strong>Computer API</strong>. <a href="https://changes.openinterpreter.com/log/the-new-computer-update">Read On →</a>
+<strong>The New Web UI Update</strong> introduced a new <strong>Login experience</strong>. <a href="https://docs.google.com/document/d/1YkVW-xTbZ6kdDMHiEEH0Ls8R_bz_hpFfJt4RAvD3fFY/edit">Read On →</a>
 </p>
 <br>
 
