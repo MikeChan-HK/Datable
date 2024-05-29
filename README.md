@@ -10,4 +10,4 @@ These days, managing database means navigating an endless sea of complexity. I f
 # License
 This project is licensed under the MIT License.
 
-![Build Status](https://travis-ci.org/yourusername/yourproject.svg?branch=main%29)
+![Build Status]Beta
