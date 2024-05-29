@@ -10,4 +10,4 @@ These days, managing database means navigating an endless sea of complexity. I f
 # License
 This project is licensed under the MIT License.
 
-![Build Status]Beta
+![Build Status]("Beta")
