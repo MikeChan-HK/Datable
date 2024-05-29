@@ -2,8 +2,6 @@
 
 <p align="center">
     <a href="https://github.com/MikeChan-HK/Datable"><img src="https://img.shields.io/static/v1?label=Share My Repo&message=Datable&color=gold&style=flat" alt="Datable"/></a>
-    <a href="https://github.com/OpenInterpreter/open-interpreter/blob/main/docs/README_ZH.md"><img src="https://img.shields.io/badge/文档-中文版-white.svg" alt="ZH doc"/></a>
-    <a href="https://github.com/OpenInterpreter/open-interpreter/blob/main/docs/README_EN.md"><img src="https://img.shields.io/badge/Doc-English-white.svg" alt="EN doc"/></a>
     <a href="https://github.com/MikeChan-HK/Datable/blob/main/LICENSE"><img src="https://img.shields.io/static/v1?label=license&message=MIT&color=white&style=flat" alt="License"/></a>
     <br>
     <br>
@@ -12,11 +10,11 @@
 
 <br>
 
-![poster](https://github.com/KillianLucas/open-interpreter/assets/63927363/08f0d493-956b-4d49-982e-67d4b20c4b56)
+![poster](https://github.com/MikeChan-HK/Datable/blob/main/public/Assets/logo_introduction.png)
 
 <br>
 <p align="center">
-<strong>The New Computer Update</strong> introduced <strong><code>--os</code></strong> and a new <strong>Computer API</strong>. <a href="https://changes.openinterpreter.com/log/the-new-computer-update">Read On →</a>
+<strong>The New Web UI Update</strong> introduced a new <strong>Login experience</strong>. <a href="https://docs.google.com/document/d/1YkVW-xTbZ6kdDMHiEEH0Ls8R_bz_hpFfJt4RAvD3fFY/edit">Read On →</a>
 </p>
 <br>
 
@@ -46,8 +44,10 @@ This provides a natural-language interface to your database's general-purpose ca
 <br>
 
 # Showcase
+![poster](https://github.com/MikeChan-HK/Datable/blob/main/public/Assets/logo_introduction.png)
+<br>
 
-## Demo
+# Demo
 
 https://www.datable.ai
 
