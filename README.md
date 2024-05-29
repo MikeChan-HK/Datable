@@ -1,3 +1,5 @@
+![Static Badge](https://img.shields.io/badge/Share%20-%20https%3A%2F%2Fgithub.com%2FMikeChan-HK%2Fdatable?style=flat)
+
 # Datable 
 Datable, is a school resource management system developed as an ICT SBA (School-Based Assessment) project. Datable is designed for the student union's material borrowing and returning management, aiming to solve the problems found in daily operations and enhance the efficiency and effectiveness of daily operations.  By developing a material borrowing and returning registration system, it is possible to effectively manage and monitor the school's various assets. This paper proposes a feasible database management system prototype, covering the main functions and design considerations of the system. First, the system requirements are analyzed, and the corresponding entity-relationship diagram is completed. Next, the implementation of data privacy and important SQL statements for providing statistical data are discussed. Finally, this paper provides specific explanations on the testing and evaluation of the system prototype, including the pros and cons of database design, the concepts of relational databases, as well as important issues such as data validation and validity checking. The entire project aims to provide a practical material borrowing and returning registration system solution for middle school student unions.
 
@@ -9,5 +11,3 @@ These days, managing database means navigating an endless sea of complexity. I f
 
 # License
 This project is licensed under the MIT License.
-
-![Build Status]("Beta")
