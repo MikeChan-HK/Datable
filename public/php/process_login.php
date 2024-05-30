@@ -1,41 +1,45 @@
 <?php
-header('Content-Type: application/json');
+// php/process_login.php
 
-// Database configuration
-$servername = "localhost";
-$username = "your_db_username";
-$password = "your_db_password";
-$dbname = "your_db_name";
+require 'db_connection.php';
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-// Check connection
-if ($conn->connect_error) {
-    echo json_encode(['status' => 'error', 'message' => 'Connection failed: ' . $conn->connect_error]);
-    exit();
+    // Validate input
+    if (empty($username) || empty($password)) {
+        echo "Username and password are required.";
+        exit;
+    }
+
+    // Protect against SQL injection
+    $username = $conn->real_escape_string($username);
+    $password = $conn->real_escape_string($password);
+
+    // Check credentials
+    $sql = "SELECT * FROM user WHERE User_Name = '$username'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        $user = $result->fetch_assoc();
+        // Verify password
+        if (password_verify($password, $user['Password'])) {
+            // Password is correct
+            session_start();
+            $_SESSION['user_id'] = $user['ID'];
+            $_SESSION['username'] = $user['User_Name'];
+            $_SESSION['access_level'] = $user['Access_Level'];
+            header("Location: work.html");
+        } else {
+            // Password is incorrect
+            echo "Invalid password.";
+        }
+    } else {
+        // User not found
+        echo "User not found.";
+    }
 }
 
-// Get user input from form
-$userID = $_POST['userID'];
-$password = $_POST['password'];
-
-// Prepare and bind
-$stmt = $conn->prepare("SELECT * FROM users WHERE userID = ? AND password = ?");
-$stmt->bind_param("ss", $userID, $password);
-
-// Execute statement
-$stmt->execute();
-$result = $stmt->get_result();
-
-if ($result->num_rows > 0) {
-    // Login successful
-    echo json_encode(['status' => 'success']);
-} else {
-    // Login failed
-    echo json_encode(['status' => 'fail']);
-}
-
-$stmt->close();
 $conn->close();
 ?>
