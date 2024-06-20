@@ -6,7 +6,7 @@
 <br>
 <br>
 <br>
-![Progress](https://progressed.io/bar/50?title=progress)
+<progress value="50" max="100"></progress>
     <br>
     <br><a href="s191211@cpss.edu.hk">Get early access to the Datable web app</a>‎ ‎ |‎ ‎ <a href="https://docs.google.com/document/d/1YkVW-xTbZ6kdDMHiEEH0Ls8R_bz_hpFfJt4RAvD3fFY/edit">Research Documentation</a><br>
 </p>
