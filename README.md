@@ -4,9 +4,6 @@
     <a href="https://github.com/MikeChan-HK/Datable"><img src="https://img.shields.io/static/v1?label=Share My Repo&message=Datable&color=gold&style=flat" alt="Datable"/></a>
     <a href="https://github.com/MikeChan-HK/Datable/blob/main/LICENSE"><img src="https://img.shields.io/static/v1?label=license&message=MIT&color=white&style=flat" alt="License"/></a>
 <br>
-<br>
-<br>
-<progress value="50" max="100"></progress>
     <br>
     <br><a href="s191211@cpss.edu.hk">Get early access to the Datable web app</a>‎ ‎ |‎ ‎ <a href="https://docs.google.com/document/d/1YkVW-xTbZ6kdDMHiEEH0Ls8R_bz_hpFfJt4RAvD3fFY/edit">Research Documentation</a><br>
 </p>
