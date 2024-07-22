@@ -28,7 +28,7 @@ if (!empty($sqlQuery)) {
     }
 } elseif (!empty($simpleSearch)) {
     // Perform a simple search across relevant tables
-    // This is a placeholder for the actual search logic
+    
     $response .= "Simple search results for: " . htmlspecialchars($simpleSearch);
 }
 

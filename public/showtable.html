@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show Table</title>
+  <script>
+    function goBack() {
+      window.location.href = 'work.html';
+    }
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffff99;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffff99;
+    }
+    .header {
+      width: 100%;
+      padding: 10px;
+      background-color: #ffff99;
+      display: flex;
+      align-items: left;
+      border-bottom: 2px solid black;
+    }
+    #back_btn{
+      margin-left: 5%;
+    }
+
+    .header button {
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 100%;
+      width: 40px;
+      height: 46px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .datable-btn {
+      margin-left: 10px;
+      width: 120px;
+      height: 46px;
+      background-color: transparent; /* To make it look like an image */
+      border: none; /* Remove button border */
+      padding: 0; /* Remove button padding */
+      cursor: pointer; 
+    }
+    .header h1 {
+      cursor: pointer;
+      align-self: right;
+      margin-left: 40%;
+      font-size: 24px;
+      color: black;
+    }
+    .table-container {
+      width: 80%;
+      height: 80%;
+      border: 2px solid black;
+      background-color: white;
+      display: block; /* Changed to block for immediate visibility */
+      padding: 20px;
+      overflow-y: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <button id="back_btn" onclick="goBack()">&lt;</button>
+      <img class="datable-btn" src="Assets/logo.png" alt="Datable"/>
+      <h1>Show Table - Log</h1>
+    </div>
+    <div class="table-container" id="tableContainer">
+      <table>
+        <thead>
+          <tr>
+            <th>Log_ID</th>
+            <th>Item_ID</th>
+            <th>User_ID</th>
+            <th>Department_ID</th>
+            <th>Log_Borrow_Date</th>
+            <th>Log_Return_Date</th>
+            <th>Log_Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>101</td>
+            <td>2001</td>
+            <td>10</td>
+            <td>2023-01-01 10:00:00</td>
+            <td>2023-01-10 10:00:00</td>
+            <td>Returned</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>102</td>
+            <td>2002</td>
+            <td>11</td>
+            <td>2023-02-01 11:00:00</td>
+            <td>2023-02-10 11:00:00</td>
+            <td>Borrowed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
