@@ -17,8 +17,8 @@
       <div class="content-box">
         <p class="content-text">Start using Datable for student union</p>
         <form id="login-form" action="process_login.php" method="post">
-          <input class="login-input" type="text" name="userID" placeholder="User ID">
-          <input class="login-input" type="password" name="password" placeholder="Password">
+          <input class="login-input" type="text" name="userID" placeholder="User ID" required>
+          <input class="login-input" type="password" name="password" placeholder="Password" required>
           <button class="login-button" type="submit" id="submit-search">Continue</button>
         </form>
         <p class="terms-text">By continuing, You understand that the AI feature is experimental and may cause errors.</p>
@@ -65,7 +65,7 @@
             window.location.href = 'work.php';
           }, 2000);
         } else {
-          showPopup('Invalid userID or password');
+          showPopup(data.message);
         }
       })
       .catch(error => {

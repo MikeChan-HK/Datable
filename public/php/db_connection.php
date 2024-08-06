@@ -1,8 +1,9 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "your_database_name";
+$servername = "aws-0-ap-northeast-1.pooler.supabase.com";
+$username = "postgres.zscwjnenquldkaooixnf";
+$password = "datable2024ictsba";
+$port = 6543
+$dbname = "postgres";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
