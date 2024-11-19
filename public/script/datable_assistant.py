@@ -1,4 +1,4 @@
-!pip install langchain langchain-google-genai langchain_experimental mysql-connector-python-rf
+#!pip install langchain langchain-google-genai langchain_experimental mysql-connector-python-rf
 
 import getpass
 import os
